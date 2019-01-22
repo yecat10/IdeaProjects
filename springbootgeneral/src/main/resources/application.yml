@@ -1,0 +1,79 @@
+#使用yml管理基础环境配置，使用properties管理环境启动后的属性读取
+
+#开启springboot的debug模式
+debug:  false
+
+# 使用yml管理配置数据的样例
+#person:
+#  name: zhangsan
+#  age: 20
+#  birthday: 2008/10/10
+#  national: Chinese
+#  dog:
+#    name: Handson
+#    type: jinmao
+#  list:
+#  - a
+#  - b
+#  - c
+#  map: {k1: 00,k2: 23,k3: 96}
+
+#yml 可以使用多文档块激活，使用 "---"来分割文档块，所以只需要一个yml文件管理，例如：
+#修改和server有关的配置(ServerProperties【也是EmbeddedServletContainerCustomizer】 server.xxx server.tomcat.xxx
+server:
+  port: 8081 #没有设定active时，默认使用该值
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://192.168.1.109:3306/dbriver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+    #   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall,log4j
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+#配置mybatis全局配置文件和映射文件
+#mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+#  mapper-locations: classpath:mybatis/mapper/*
+
+#配置spring jpa,不与mybatis配置同时生效
+  jpa:
+    hibernate:
+      #更新或者创建数据表结构
+      ddl-auto: update
+    #控制台显示SQL
+    show-sql: true
+---
+
+server:
+  port: 8080
+
+spring:
+  profiles: dev
+
+---
+
+server:
+  port: 80
+spring:
+  profiles: prod

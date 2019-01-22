@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-04-web-restfulcrud" />
+        <module name="springboot-extenal-server" />
+        <module name="springbootgeneral" />
+        <module name="springbootgeneral (1) (com.doubleriver)" />
+        <module name="springboothelloworld" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="springboot-extenal-server" target="1.8" />
+      <module name="springbootgeneral" target="1.8" />
+      <module name="springbootgeneral (1) (com.doubleriver)" target="1.8" />
+      <module name="springboothelloworld" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="springboot-extenal-server" options="-parameters" />
+      <module name="springbootgeneral" options="-parameters" />
+      <module name="springbootgeneral (1) (com.doubleriver)" options="-parameters" />
+      <module name="springboothelloworld" options="-parameters" />
+    </option>
+  </component>
+</project>

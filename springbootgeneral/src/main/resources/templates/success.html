@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>thymleaf渲染内容如下：</h1>
+<div th:object="${person}">
+    <!--
+    <span th:utext="*{name}"></span><br>
+    <span th:utext="*{age}"></span><br>
+    <span th:utext="*{national}"></span><br>
+    <span th:utext="*{birthday}"></span>
+
+    <span th:utext="${person.name}"></span><br>
+    <span th:utext="${person.age}"></span><br>
+    <span th:utext="${person.national}"></span><br>
+    <span th:utext="${person.birthday}"></span>
+    -->
+</div>
+<br>
+<div th:each="user:${list}" th:text="${user}"></div>
+
+
+<!--th:text 将div里面的文本内容设置为 -->
+<div id="div01" class="myDiv" th:id="${hello}" th:class="${hello}" th:text="${hello}">这是显示欢迎信息</div>
+<hr/>
+<div th:text="${hello}"></div>
+<div th:utext="${hello}"></div>
+<hr/>
+
+<!-- th:each每次遍历都会生成当前这个标签： 3个h4 -->
+<h4 th:text="${user}"  th:each="user:${list}"></h4>
+<hr/>
+<h4>
+    <!-- 在标签内填写内容 -->
+    <!-- 使用th:each循环-->
+    <span th:each="user:${list}"> [[${user}]] </span>
+</h4>
+<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit"/>
+</form>
+</body>
+</html>

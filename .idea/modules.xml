@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IdeaProjects.iml" filepath="$PROJECT_DIR$/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaWebModule/JavaWebModule.iml" filepath="$PROJECT_DIR$/JavaWebModule/JavaWebModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NIO/NIO.iml" filepath="$PROJECT_DIR$/NIO/NIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StaticWebModule/StaticWebModule.iml" filepath="$PROJECT_DIR$/StaticWebModule/StaticWebModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/design_patterns/design_patterns.iml" filepath="$PROJECT_DIR$/design_patterns/design_patterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-extenal-server/springboot-extenal-server.iml" filepath="$PROJECT_DIR$/springboot-extenal-server/springboot-extenal-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootgeneral/springbootgeneral.iml" filepath="$PROJECT_DIR$/springbootgeneral/springbootgeneral.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootgeneral/springbootgeneral (1) (com.doubleriver).iml" filepath="$PROJECT_DIR$/springbootgeneral/springbootgeneral (1) (com.doubleriver).iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboothelloworld/springboothelloworld.iml" filepath="$PROJECT_DIR$/springboothelloworld/springboothelloworld.iml" />
+    </modules>
+  </component>
+</project>
